@@ -2,7 +2,7 @@
 
 ## Brief description
 
-This source code simulates 2D diffusion (e.g. biological membrane components) in presence of a partially reflective meshgrid.
+This source code simulates 2D diffusion (e.g. biological membrane components) under periodic boundary conditions in presence of a partially reflective meshgrid.
 
 - N particles perform a random walk in 2D
 - A meshgrid (repesenting a membrane skeleton) reflects particles, which can only pass with a probability p_jump
@@ -10,7 +10,7 @@ This source code simulates 2D diffusion (e.g. biological membrane components) in
 - The fluorescence traces are autocorrelated using the multiple tau algorithm, resulting in realistic fluorescence correlation spectroscopy (FCS) curves
 
 The code was used to generate simulations published in the Biophysical Journal paper
-<i>Lateral membrane diffusion modulated by a minimal actin cortex</i>, Heinemann F., Vogel SK, Schwille P., 2013 (https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9)
+_Lateral membrane diffusion modulated by a minimal actin cortex_, Heinemann F., Vogel SK, Schwille P., 2013 (https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9)
 
 The simulation was quite heavily optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation).
 
@@ -52,11 +52,20 @@ The yaml file contains repeating blocks of 4 parameters. An example is in the re
 Each block is one simulation and will output one result file. All blocks are computed until the end.
 
 ### Parameter description:
-- voronoimesh: A text file with coordinates of the mesh. See example in repository. I used a custom program performing Voronoi tesselation (https://en.wikipedia.org/wiki/Voronoi_diagram), which I can distrubute on request.
-- resultfile: Name of output file to write to. Output will be a simple textfile containing the 9 simulated FCS autocorrelation curves and their average.
-- p_jump: Probability to cross a mesh fibre. 
-- Tmax time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
+_voronoimesh:_ A text file with coordinates of the mesh. See example in repository. I used a custom program performing Voronoi tesselation (https://en.wikipedia.org/wiki/Voronoi_diagram), which I can distrubute on request.
+_resultfile:_ Name of output file to write to. Output will be a simple textfile containing the 9 simulated FCS autocorrelation curves and their average.
+_p_jump:_ Probability to cross a mesh fibre. 
+_Tmax:_ time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
 
-Example for a simulated FCS curve (without mesh; with mesh the curve will move to right and a second component may appear, see paper https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9).
+## Example result when plotted
+
+A simulated FCS curve (without mesh; with mesh the curve will move to right and a second component may appear, see paper https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9).
 
 ![FCS curve](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/fcs_free.png)
+
+## Note:
+
+CSimulatedDiffusion.cpp contains further physical and simulation parameters, which can be modified, e.g.:
+- Diffusion coefficient: D (default: 10 µm²/s)
+- Confocal spot size: r0 (default: 250 nm)
+- Particle number: nParticles (default: 1000)
