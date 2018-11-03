@@ -1,4 +1,4 @@
-# simulated_2d_diffusion
+# Simulated 2D Diffusion in presence of a partially reflecting mesh
 
 This source code simulates 2D diffusion (e.g. biological membrane components) in presence of a partially reflective meshgrid.
 
