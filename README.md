@@ -1,5 +1,7 @@
 # Simulated 2D Diffusion in presence of a partially reflecting mesh
 
+## Brief description
+
 This source code simulates 2D diffusion (e.g. biological membrane components) in presence of a partially reflective meshgrid.
 
 - N particles perform a random walk in 2D
@@ -14,31 +16,42 @@ The simulation was quite heavily optimized for performance using a profiler. It 
 
 ![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/Frame_0.png)
 
-Dependencies:
+## Dependencies
+
 - boost (https://www.boost.org/)
 (tested with the somewhat old: boost 1_48_0)
 - cpp-yaml (https://github.com/jbeder/yaml-cpp)
 
-Environment:
-- Tested under Windows 7 and 10
-- Should in principle also run under Unix
+## Environment
 
-Usage in console:
+- Tested under Windows 7 and 10 (should in principle also run under Linux)
 
+## Basic usage
+
+1. Compile the project
+2. Create file(s) decribing meshgrid (see mesh/1-2 mean82 sd31.txt)
+3. Create / edit yaml file configuring the simulation
+4. Open cmd, browse to project folder and run 
 >simulated_diffusion.exe simulation_list.yaml
-
 ![Console screenshot](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/console.png)
+5. Drink some coffee and wait...
+6. Analyze simulation results written to text files
+
+## Description of configuration yaml
 
 The yaml file contains repeating blocks of 4 parameters. An example is in the repository. Example block:
 
 >voronoimesh: ./mesh/1-2 mean82 sd31.txt
+
 >resultfile: ./1-2 mean82 sd31_p001.txt
+
 >pjump: 0.01
+
 >Tmax: 100
 
 Each block is one simulation and will output one result file. All blocks are computed until the end.
 
-Parameter description:
+### Parameter description:
 - voronoimesh: A text file with coordinates of the mesh. See example in repository. I used a custom program performing Voronoi tesselation (https://en.wikipedia.org/wiki/Voronoi_diagram), which I can distrubute on request.
 - resultfile: Name of output file to write to. Output will be a simple textfile containing the 9 simulated FCS autocorrelation curves and their average.
 - p_jump: Probability to cross a mesh fibre. 
