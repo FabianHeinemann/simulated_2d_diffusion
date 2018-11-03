@@ -10,7 +10,9 @@ This source code simulates 2D diffusion (e.g. biological membrane components) in
 The code was used to generate simulations published in the Biophysical Journal paper
 <i>Lateral membrane diffusion modulated by a minimal actin cortex</i>, Heinemann F., Vogel SK, Schwille P., 2013 (https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9)
 
-The simulation was heavily optimized for performance and is written in C++ with a small inline assembly part for a much faster floor computation.
+The simulation was quite heavily optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation).
+
+![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/Frame_0.png)
 
 Dependencies:
 - boost (https://www.boost.org/)
@@ -25,7 +27,8 @@ Usage in console:
 
 >simulated_diffusion.exe simulation_list.yaml
 
-![title](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/Frame_0.png
+![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/console.png)
+
 
 To do:
 - describe input files
