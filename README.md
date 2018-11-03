@@ -29,18 +29,21 @@ Usage in console:
 
 ![Console screenshot](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/console.png)
 
-The yaml file contains repeating blocks of 4 parameters. Example of one block:
+The yaml file contains repeating blocks of 4 parameters. An example is in the repository. Example block:
 
-voronoimesh: ./mesh/1-2 mean82 sd31.txt
-resultfile: ./1-2 mean82 sd31_p001.txt
-pjump: 0.01
-Tmax: 100
+>voronoimesh: ./mesh/1-2 mean82 sd31.txt
+>resultfile: ./1-2 mean82 sd31_p001.txt
+>pjump: 0.01
+>Tmax: 100
 
 Each block is one simulation and will output one result file. All blocks are computed until the end.
 
-p_jump is the probability to cross a mesh fibre.
-Tmax is the time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
+Parameter description:
+- voronoimesh: A text file with coordinates of the mesh. See example in repository. I used a custom program performing Voronoi tesselation (https://en.wikipedia.org/wiki/Voronoi_diagram), which I can distrubute on request.
+- resultfile: Name of output file to write to. Output will be a simple textfile containing the 9 simulated FCS autocorrelation curves and their average.
+- p_jump: Probability to cross a mesh fibre. 
+- Tmax time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
 
-The output file specified in <i>resultfile</i> is a simple textfile containing the 9 simulated FCS autocorrelation curves and their average. Example for a curve without mesh (with mesh the curve will move to right and a second component may appear, see paper https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9 or contact me).
+Example for a simulated FCS curve (without mesh; with mesh the curve will move to right and a second component may appear, see paper https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9).
 
 ![FCS curve](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/fcs_free.png)
