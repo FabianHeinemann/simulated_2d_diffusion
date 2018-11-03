@@ -38,6 +38,9 @@ Tmax: 100
 
 Each block is one simulation and will output one result file. All blocks are computed until the end.
 
-The output file is a simple textfile containing the 9 simulated FCS autocorrelation curves and their average. Example for a curve without mesh (with mesh the curve will move to right and a second component may appear, see paper).
+p_jump is the probability to cross a mesh fibre.
+Tmax is the time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
+
+The output file specified in <i>resultfile</i> is a simple textfile containing the 9 simulated FCS autocorrelation curves and their average. Example for a curve without mesh (with mesh the curve will move to right and a second component may appear, see paper https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9 or contact me).
 
 ![FCS curve](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/fcs_free.png)
