@@ -1,0 +1,13 @@
+#---
+voronoimesh: ./mesh/1-2 mean82 sd31.txt
+resultfile: ./1-2 mean82 sd31_p001.txt
+pjump: 0.01
+Tmax: 0.1
+#...
+#---
+voronoimesh: ./mesh/1-1 mean79 sd32.txt
+resultfile: ./1-1 mean79 sd32.txt
+pjump: 0.01
+Tmax: 0.1
+#...
+#---
