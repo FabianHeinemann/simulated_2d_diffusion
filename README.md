@@ -12,14 +12,19 @@ This source code simulates 2D diffusion (e.g. biological membrane components) un
 The code was used to generate simulations published in the Biophysical Journal paper
 _Lateral membrane diffusion modulated by a minimal actin cortex_, Heinemann F., Vogel SK, Schwille P., 2013 (https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9)
 
-The simulation was quite heavily optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation). The code should be quite readable though (just 3 files). I recommend starting with main, then looking at CSimulatedDiffusion::start(), thats where the simulation takes place.
+The simulation was quite heavily optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation). 
+
+The code should be quite readable though (just 3 files). 
+
+I recommend starting with main(), then looking at CSimulatedDiffusion::start() where the simulation takes place.
 
 ### Who may care?
 
 - **Scientists** working on **FCS** and / or **2D diffusion**
-- **Game developers** looking for example implementations of **spatial hashing in C++** (a method for very fast collision detection, see https://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/)
+- **Developers** looking for example implementations of **spatial hashing in C++** (a method for very fast collision detection, see https://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/). 
 
 ![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/Frame_0.png)
+**Image:** _Simulated actin mesh, diffusing particles and 9 confocal detection spots._
 
 ## Dependencies
 
