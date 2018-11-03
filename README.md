@@ -25,6 +25,8 @@ Usage in console:
 
 >simulated_diffusion.exe simulation_list.yaml
 
+![title](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/Frame_0.png
+
 To do:
 - describe input files
 - Images
