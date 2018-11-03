@@ -27,9 +27,17 @@ Usage in console:
 
 >simulated_diffusion.exe simulation_list.yaml
 
-![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/console.png)
+![Console screenshot](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/console.png)
 
+The yaml file contains repeating blocks of 4 parameters. Example of one block:
 
-To do:
-- describe input files
-- Images
+voronoimesh: ./mesh/1-2 mean82 sd31.txt
+resultfile: ./1-2 mean82 sd31_p001.txt
+pjump: 0.01
+Tmax: 100
+
+Each block is one simulation and will output one result file. All blocks are computed until the end.
+
+The output file is a simple textfile containing the 9 simulated FCS autocorrelation curves and their average. Example for a curve without mesh (with mesh the curve will move to right and a second component may appear, see paper).
+
+![FCS curve](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/fcs_free.png)
