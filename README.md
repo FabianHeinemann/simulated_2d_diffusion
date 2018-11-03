@@ -53,8 +53,11 @@ Each block is one simulation and will output one result file. All blocks are com
 
 ### Parameter description:
 -_voronoimesh:_ A text file with coordinates of the mesh. See example in repository. I used a custom program performing Voronoi tesselation (https://en.wikipedia.org/wiki/Voronoi_diagram), which I can distrubute on request.
+
 -_resultfile:_ Name of output file to write to. Output will be a simple textfile containing the 9 simulated FCS autocorrelation curves and their average.
+
 -_p_jump:_ Probability to cross a mesh fibre. 
+
 -_Tmax:_ time in simulated seconds (I recommend 100-300s, with larger values for dense meshes and / or high pjump).
 
 ## Example result when plotted
@@ -69,3 +72,5 @@ CSimulatedDiffusion.cpp contains further physical and simulation parameters, whi
 - Diffusion coefficient: D (default: 10 µm²/s)
 - Confocal spot size: r0 (default: 250 nm)
 - Particle number: nParticles (default: 1000)
+
+Try it out!
