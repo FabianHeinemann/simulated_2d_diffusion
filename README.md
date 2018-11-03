@@ -16,9 +16,8 @@ The simulation was quite heavily optimized for performance using a profiler. It 
 
 ### Who may care?
 
-- Scientists working on Fluorescence Correlation Spectroscopy and / or diffusion
-- Students alike
-- Game developers looking for example implementations of spatial hashing in C++ (spatial hashing is a method for very fast collision detection)
+- **Scientists** working on **FCS** and / or **2D diffusion**
+- **Game developers** looking for example implementations of **spatial hashing in C++** (a method for very fast collision detection, see https://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/)
 
 ![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/Frame_0.png)
 
