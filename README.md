@@ -15,7 +15,7 @@ _Lateral membrane diffusion modulated by a minimal actin cortex_, Heinemann F., 
 
 The simulation was optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation). 
 
-The code should be easy to read (just three files). I recommend starting with main(), then looking at CSimulatedDiffusion::start() where the simulation takes place.
+The code should be easy to read (three files with lots of comments). I recommend starting with main(), then looking at CSimulatedDiffusion::start() where the simulation takes place.
 
 ### Who may care?
 
