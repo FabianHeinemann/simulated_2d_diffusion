@@ -5,8 +5,8 @@
 This source code simulates 2D diffusion (e.g. biological membrane components) under periodic boundary conditions in presence of a partially reflective meshgrid.
 
 - N particles perform a random walk in 2D
-- A meshgrid (repesenting a membrane skeleton) reflects particles, which can only pass with a probability p_jump
-- 9 Gaussian shaped detection spots are placed on the membrane and simulated fluorescence trances are aquired
+- A meshgrid (repesenting a membrane skeleton) reflects particles, which can only pass with a probability p<sub>jump</sub>
+- 9 Gaussian shaped detection spots are placed on the membrane and simulated fluorescence traces are aquired
 - The fluorescence traces are autocorrelated using the multiple tau algorithm, resulting in realistic fluorescence correlation spectroscopy (FCS) curves
 
 The code was used to generate simulations published in the Biophysical Journal paper
