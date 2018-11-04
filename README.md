@@ -9,7 +9,8 @@ This source code simulates 2D diffusion (e.g. biological membrane components) un
 - 9 Gaussian shaped detection spots are placed on the membrane and simulated fluorescence traces are aquired
 - The fluorescence traces are autocorrelated using the multiple tau algorithm, resulting in realistic fluorescence correlation spectroscopy (FCS) curves
 
-The code was used to generate simulations published in the Biophysical Journal paper
+The code was used to generate simulations published in a Biophysical Journal publication.
+
 _Lateral membrane diffusion modulated by a minimal actin cortex_, Heinemann F., Vogel SK, Schwille P., 2013 (https://www.cell.com/biophysj/fulltext/S0006-3495(13)00260-9)
 
 The simulation was quite heavily optimized for performance using a profiler. It is written in C++ (with a small inline assembly part for a much faster floor computation). 
