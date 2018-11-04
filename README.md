@@ -1,8 +1,8 @@
-# Simulated 2D Diffusion in presence of a partially reflecting mesh
+# Simulated 2D Diffusion in presence of a semi-reflective mesh
 
 ## Brief description
 
-This source code simulates 2D diffusion (e.g. biological membrane components) under periodic boundary conditions in presence of a partially reflective meshgrid.
+This source code simulates 2D diffusion (e.g. biological membrane components) under periodic boundary conditions in presence of a partially reflective meshgrid (e.g. actin membrane skeleton).
 
 - N particles perform a random walk in 2D
 - A meshgrid (repesenting a membrane skeleton) reflects particles, which can only pass with a probability p<sub>jump</sub>
