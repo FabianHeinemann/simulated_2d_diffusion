@@ -19,7 +19,7 @@ The code should be easy to read (three files with lots of comments). I recommend
 
 ### Who may care?
 
-- **Scientists** working on or interested in **FCS** and / or **diffusion**
+- **Scientists** working on, or interested in **FCS** and / or **diffusion**
 - **Developers** looking for example implementations of **spatial hashing in C++** (a method for very fast collision detection, see https://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/). 
 
 ![Simulation_illustration](https://github.com/FabianHeinemann/simulated_2d_diffusion/blob/master/images/Frame_0.png)
